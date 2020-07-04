@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -17,10 +19,11 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix", "yarn test --bail"
+      "yarn lint --fix",
+      "yarn test --bail"
     ]
   },
-   "dependencies": {
+  "dependencies": {
     "next": "9.4.4",
     "next-pwa": "^2.6.1",
     "react": "16.13.1",
